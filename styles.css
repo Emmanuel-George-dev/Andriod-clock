@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+:root {
+  --dark-color: #414141;
+}
+body {
+  background-color: #e9e7e7;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.wrapper {
+  display: grid;
+  gap: 50px;
+}
+.analog {
+  position: relative;
+  background: url(./assets/clock-bg.png) center no-repeat;
+  background-size: cover;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.analog img {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  inset: 0;
+  margin: auto;
+}
+.center {
+  position: absolute;
+  background-color: #ef1743;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 100;
+}
+.seconds {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: 50%;
+  height: 5rem;
+  width: 2.5px;
+  border-radius: 50px;
+  background-color: #ef1743;
+  transform-origin: bottom;
+  display: flex;
+  justify-content: center;
+  z-index: 50;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
+}
+.seconds::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  border-radius: inherit;
+  height: 8px;
+  width: 1.5px;
+  background-color: #f2f2f2;
+}
+.seconds::after {
+  position: absolute;
+  content: "";
+  bottom: -15px;
+  border-radius: inherit;
+  height: 15px;
+  width: inherit;
+  background-color: inherit;
+}
+.minutes {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: 50%;
+  height: 4rem;
+  width: 2.5px;
+  border-radius: 50px;
+  background-color: var(--dark-color);
+  transform-origin: bottom;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
+}
+.hours {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: 50%;
+  height: 3rem;
+  width: 5.4px;
+  border-radius: 50px;
+  background-color: var(--dark-color);
+  transform-origin: bottom;
+
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
+}
+.dates {
+  font-size: 14px;
+  font-weight: 500;
+}
+.digital {
+  text-align: center;
+  color: var(--dark-color);
+
+  text-shadow: 0 0 1.2px var(--dark-color);
+}
+.time {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+.ampm {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--dark-color);
+}
